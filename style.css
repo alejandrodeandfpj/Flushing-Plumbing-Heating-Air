@@ -1,0 +1,1149 @@
+/* --- Global Reset & Corporate Variables (Ref: Design Color Palette) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+:root {
+    --primary-navy: #001F4D;
+    --accent-yellow: #FFCD29;
+    --light-bg: #F8FAFC;
+    --dark-text: #0F172A;
+    --muted-gray: #64748B;
+    --border-color: #E2E8F0;
+    --toast-bg: #5A5D64;
+}
+
+body {
+    background-color: #FFFFFF;
+    color: var(--dark-text);
+    line-height: 1.5;
+}
+
+/* --- Header Component Layout --- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    border-bottom: 1px solid var(--border-color);
+    background: #FFFFFF;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo-graphic {
+    width: 70px;
+    height: auto;
+}
+
+.logo-title {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--primary-navy);
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-links a.active {
+    font-weight: 700;
+    border-bottom: 2px solid var(--primary-navy);
+}
+
+.phone-cta-btn {
+    background-color: var(--accent-yellow);
+    color: var(--primary-navy);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* --- Hero Frame (Ref: image_09a241.jpg) --- */
+header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            z-index: 10;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        /* Placeholder SVG Logo mimicking the image icon */
+        .logo-icon {
+            width: 45px;
+            height: 25px;
+            margin-bottom: 2px;
+        }
+
+        .logo-text {
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            color: #0a1931;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #334155;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: #0a1931;
+        }
+
+        .phone-btn {
+            background-color: #0a1931;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 22px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .phone-btn:hover {
+            background-color: #15305b;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Technical Line-Art Valve Illustration SVG Wrapper */
+        .valve-illustration {
+            width: 100%;
+            max-width: 750px;
+            margin-bottom: -20px; /* Slight overlap with text layout styling */
+            opacity: 0.9;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 900;
+            color: #0a1931;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: #475569;
+            margin-bottom: 28px;
+            font-weight: 400;
+        }
+
+        /* Button Groups */
+        .cta-container {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 60px;
+        }
+
+        .btn {
+            padding: 12px 32px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background-color: #0a1931;
+            color: #ffffff;
+            border: 2px solid #0a1931;
+        }
+
+        .btn-primary:hover {
+            background-color: #15305b;
+            border-color: #15305b;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #0f172a;
+            border: 2px solid #94a3b8;
+        }
+
+        .btn-secondary:hover {
+            border-color: #0a1931;
+            background-color: rgba(10, 25, 49, 0.02);
+        }
+
+        /* --- Bottom Notification Toast --- */
+        .toast-notification {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #555555;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            width: 360px;
+            z-index: 100;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .toast-content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toast-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #e2e8f0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .toast-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .toast-text {
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .toast-btn {
+            background-color: #ffffff;
+            color: #333333;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .toast-btn:hover {
+            background-color: #f1f5f9;
+        }
+
+        .toast-close {
+            background: none;
+            border: none;
+            color: #bfaeae;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 0 4px;
+            line-height: 1;
+        }
+
+        .toast-close:hover {
+            color: #ffffff;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: translate(-50%, 20px);
+            pointer-events: none;
+        }
+
+        /* --- Responsive Design Adjustments --- */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero h1 {
+                font-size: 36px;
+            }
+            .cta-container {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+/* --- Core Control Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 12px 35px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-solid {
+    background-color: var(--accent-yellow);
+    color: var(--primary-navy);
+    border: 1px solid var(--accent-yellow);
+}
+
+.btn-solid:hover {
+    background-color: #ebd115;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-navy);
+    border: 1px solid var(--primary-navy);
+}
+
+.btn-outline:hover {
+    background-color: rgba(0, 31, 77, 0.05);
+}
+
+.long-btn {
+    width: 100%;
+    max-width: 320px;
+}
+
+/* --- Global Section Label Layouts --- */
+.section-tag {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary-navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.section-tag::before {
+    content: "💧";
+    font-size: 10px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--primary-navy);
+    margin-bottom: 40px;
+}
+
+/* --- Services Grid Frame (Ref: image_09a229.jpg) --- */
+/* --- Redesigned General & Clean Services Section --- */
+.services-matrix-section {
+    padding: 90px 6%;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+/* Upper Flex Header Placement */
+.services-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    margin-bottom: 55px;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading-cluster {
+    flex: 1;
+}
+
+.section-label {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #64748B;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.services-header-flex h2 {
+    font-size: 36px;
+    font-weight: 400;
+    color: #001F4D;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.services-header-flex h2 .navy-weight {
+    font-weight: 900;
+}
+
+.services-intro-text {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #475569;
+    max-width: 500px;
+}
+
+/* Asymmetric Grid Layout */
+.services-layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    gap: 30px;
+    max-width: 1250px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+/* Deep Navy Focal Card Layout */
+.operations-focal-card {
+    background-color: #001F4D;
+    border-radius: 8px;
+    padding: 40px 30px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.focal-graphic-layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.focal-schematic-svg {
+    width: 100%;
+    height: auto;
+}
+
+.focal-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* General Status Badge Indicator */
+.status-indicator-tag {
+    align-self: flex-start;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #FFCD29;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #FFCD29;
+    border-radius: 50%;
+}
+
+.operations-focal-card h3 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.operations-focal-card p {
+    color: #94A3B8;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 45px;
+}
+
+.focal-footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dispatch-text {
+    font-size: 12.5px;
+    color: #ffffff;
+}
+
+.focal-route-btn {
+    background-color: #FFCD29;
+    color: #001F4D;
+    text-align: center;
+    padding: 14px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 13.5px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+}
+
+.focal-route-btn:hover {
+    background-color: #ebd115;
+}
+
+/* Right Column Block Elements */
+.services-ribbon-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.service-ribbon-row {
+    background-color: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    padding: 28px 35px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.service-ribbon-row:hover {
+    background-color: #ffffff;
+    border-color: #001F4D;
+}
+
+.ribbon-flex-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.ribbon-title-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width: 280px;
+}
+
+.ribbon-id {
+    font-size: 18px;
+    font-weight: 700;
+    color: #94A3B8;
+    font-family: monospace;
+}
+
+.ribbon-title-group h4 {
+    font-size: 17px;
+    font-weight: 800;
+    color: #001F4D;
+}
+
+.ribbon-description {
+    font-size: 13.5px;
+    color: #64748B;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.ribbon-link-icon {
+    font-size: 18px;
+    color: #94A3B8;
+    text-decoration: none;
+    transition: color 0.15s, transform 0.15s;
+}
+
+.service-ribbon-row:hover .ribbon-link-icon {
+    color: #001F4D;
+    transform: translateX(3px);
+}
+
+/* Centered Footer Control Element */
+.services-bottom-link-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.matrix-directory-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    border: 1px solid #E2E8F0;
+    padding: 14px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #001F4D;
+    font-weight: 700;
+    font-size: 13.5px;
+    transition: all 0.15s ease;
+}
+
+.matrix-directory-btn:hover {
+    border-color: #001F4D;
+    background-color: #F8FAFC;
+}
+
+/* Responsive Overrides */
+@media (max-width: 1024px) {
+    .services-layout-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+    .services-header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ribbon-flex-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .ribbon-title-group {
+        min-width: 100%;
+    }
+    .ribbon-link-icon {
+        display: none;
+    }
+    .service-ribbon-row {
+        padding: 22px;
+    }
+}
+
+/* --- Why Choose Us Split Component (Ref: image_09a228.jpg - Panel 1) --- */
+/* Container Spacing */
+/* --- Heavy Pipeline System Section Layout --- */
+.pipeline-wcu-section {
+    padding: 100px 4%;
+    background-color: #ffffff;
+    overflow: hidden;
+    width: 100%;
+}
+
+.pipeline-center-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 80px auto;
+}
+
+.system-tag-label {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #64748B;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.system-main-title {
+    font-size: 34px;
+    font-weight: 900;
+    color: #001F4D;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+}
+
+.system-lead-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #475569;
+}
+
+/* Graphic Line Container System Wrapper */
+.pipeline-flow-container {
+    position: relative;
+    max-width: 1500px;
+    margin: 0 auto;
+    min-height: 580px;
+}
+
+/* Background Pipeline Layer Track */
+.pipeline-graphic-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.pipeline-graphic-layer svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Node Cards overriding standard blocks */
+.pipeline-nodes-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.pipe-node-block {
+    position: absolute;
+    width: 370px;
+    background: #ffffff;
+    border-left: 4px solid #001F4D;
+    padding: 22px 26px;
+    box-shadow: 0 4px 20px rgba(0, 31, 77, 0.04);
+    border-radius: 0 8px 8px 0;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pipe-node-block:hover {
+    border-left-color: #FFCD29;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 31, 77, 0.08);
+}
+
+/* Adjusted coordinates to neatly frame the newly thickened multi-layered pipe track */
+.pos-1 { top: -40px; left: 1%; }
+.pos-2 { top: 260px; left: 26%; }
+.pos-3 { top: -40px; left: 52%; }
+.pos-4 { top: 260px; left: 75%; }
+
+.node-index-badge {
+    font-size: 15px;
+    font-weight: 800;
+    color: #94A3B8;
+    font-family: monospace;
+    margin-bottom: 12px;
+}
+
+.node-inner-content h3 {
+    font-size: 17px;
+    font-weight: 800;
+    color: #001F4D;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.node-inner-content p {
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #64748B;
+}
+
+/* Bottom Anchor Area Styles */
+.pipeline-footer-action {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.pipeline-terminal-label {
+    font-size: 10px;
+    font-weight: 800;
+    color: #94A3B8;
+    letter-spacing: 1.5px;
+}
+
+.pipeline-terminal-btn {
+    display: inline-block;
+    background-color: #001F4D;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 14px 35px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    transition: background-color 0.15s ease;
+}
+
+.pipeline-terminal-btn:hover {
+    background-color: #FFCD29;
+    color: #001F4D;
+}
+
+/* Responsive Structural Breakpoints */
+@media (max-width: 992px) {
+    .pipeline-graphic-layer {
+        display: none;
+    }
+    .pipeline-flow-container {
+        min-height: auto;
+    }
+    .pipeline-nodes-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+    .pipe-node-block {
+        position: relative;
+        width: 100%;
+        top: auto !important;
+        left: auto !important;
+        background: #F8FAFC;
+        border-radius: 0 4px 4px 0;
+    }
+}
+/* --- Process Blocks (Ref: image_09a228.jpg - Panel 2) --- */
+/* --- Blueprint Process Sequence Layout --- */
+.blueprint-process-section {
+    padding: 100px 6%;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.blueprint-header {
+    max-width: 700px;
+    margin-bottom: 75px;
+}
+
+.blueprint-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #64748B;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.blueprint-main-title {
+    font-size: 34px;
+    font-weight: 400;
+    color: #001F4D;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.blueprint-main-title .blueprint-accent {
+    font-weight: 900;
+}
+
+.blueprint-lead-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #475569;
+}
+
+/* Structural Track Framework */
+.blueprint-track-container {
+    position: relative;
+    max-width: 1200px;
+    display: flex;
+    gap: 50px;
+}
+
+/* Left Mechanical Vertical Axis Track */
+.blueprint-vertical-axis {
+    position: relative;
+    width: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.axis-line {
+    width: 4px;
+    background-color: #001F4D;
+    flex: 1;
+}
+
+.axis-cap-top, .axis-cap-bottom {
+    width: 16px;
+    height: 4px;
+    background-color: #001F4D;
+}
+
+/* Step Rows Container */
+.blueprint-step-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    flex: 1;
+}
+
+/* Step Card Module Block */
+.blueprint-step-card {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* Section Marker Alignment */
+.blueprint-marker {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+.marker-dot {
+    width: 20px;
+    height: 20px;
+    background-color: #FFCD29;
+    border: 2px solid #001F4D;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.blueprint-id {
+    font-size: 15px;
+    font-weight: 800;
+    color: #001F4D;
+    font-family: monospace;
+    letter-spacing: 0.5px;
+}
+
+/* Content Panel Interior Box */
+.blueprint-content-box {
+    background-color: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    padding: 30px;
+    border-radius: 6px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.blueprint-content-box:hover {
+    background-color: #ffffff;
+    border-color: #001F4D;
+}
+
+.blueprint-content-box h3 {
+    font-size: 19px;
+    font-weight: 800;
+    color: #001F4D;
+    margin-bottom: 12px;
+}
+
+.blueprint-content-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #475569;
+}
+
+/* Secondary Navigation Action Link */
+.blueprint-action-anchor {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 18px;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #001F4D;
+    text-decoration: none;
+    border-bottom: 1.5px solid #FFCD29;
+    padding-bottom: 2px;
+    transition: color 0.15s;
+}
+
+.blueprint-action-anchor:hover {
+    color: #64748B;
+}
+
+/* Responsive Structural Fallbacks */
+@media (max-width: 768px) {
+    .blueprint-track-container {
+        gap: 20px;
+    }
+    .blueprint-vertical-axis {
+        display: none;
+    }
+    .blueprint-step-card {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .blueprint-content-box {
+        padding: 22px;
+    }
+}
+
+
+/* --- Unique Trust-Focused Footer Styles --- */
+.unique-trust-footer {
+    background-color: #ffffff;
+    border-top: 1px solid var(--border-color);
+   
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Blueprint Animation */
+.footer-upper-blueprint {
+    width: 100%;
+    height: 100px;
+    opacity: 0.6;
+    margin-bottom: -20px;
+}
+
+.house-plumbing-map {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Main Certification Strip */
+.footer-main-strip {
+    background-color: var(--primary-navy);
+    padding: 30px 5%;
+    position: relative;
+    z-index: 2;
+}
+
+.trust-badge-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.trust-icon {
+    font-size: 24px;
+}
+
+.trust-label {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.trust-divider {
+    height: 30px;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Bottom Legal Monogram Bar */
+.footer-bottom-legal {
+    padding: 20px 5%;
+    background-color: var(--light-bg);
+}
+
+.legal-flex {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-monogram {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--primary-navy);
+    letter-spacing: 2px;
+    opacity: 0.3;
+}
+
+.copyright-text {
+    font-size: 11px;
+    color: var(--muted-gray);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.license-tag {
+    font-size: 11px;
+    color: var(--primary-navy);
+    background: #E2E8F0;
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-weight: 700;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .trust-badge-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .trust-divider {
+        display: none;
+    }
+    .legal-flex {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .footer-upper-blueprint {
+        display: none; /* Simplify mobile view */
+    }
+}
